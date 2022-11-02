@@ -7,5 +7,10 @@ public class Main {
 		// loop de jogo
 		System.out.print(play.toString());
 		
+		play.player2();
+		System.out.print(play.toString());
+		play.player1();
+		System.out.print(play.toString());
+		
 	}
 }
