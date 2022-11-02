@@ -28,7 +28,6 @@ public class Play {
 			System.out.println("jogada invalida, jogue novamente");
 			// recursividade
 			player1();
-
 		}
 	}
 
@@ -53,8 +52,8 @@ public class Play {
 			player2();
 		}
 	}
-
 	// analise e validação
+<<<<<<< HEAD
 	public void analyze() {
 		// analisando linha
 		
@@ -67,5 +66,17 @@ public class Play {
 				+ "[1]" + "\n[" + table[1][0] + "]" + "[" + table[1][1] + "]" + "[" + table[1][2] + "]" + "[2]" + "\n["
 				+ table[2][0] + "]" + "[" + table[2][1] + "]" + "[" + table[2][2] + "]" + "[3]";
 	}
+=======
+	public static void analyze() {
+	}
+
+	@Override
+		public String toString() {
+			return "\n[1]" + "[2]" + "[3]" +
+				"\n[" + table[0][0] + "]" + "[" + table[0][1] + "]" + "[" + table[0][2] + "]" + "[1]" +
+				"\n[" + table[1][0] + "]"+ "[" + table[1][1] + "]" + "[" + table[1][2] + "]" +  "[2]" +
+				"\n[" + table[2][0] + "]" + "[" + table[2][1] + "]" + "[" + table[2][2] + "]" + "[3]";
+		}
+>>>>>>> e0fbfc1844f86d18daafcf08ea9259366787cec1
 
 }
