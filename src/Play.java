@@ -3,22 +3,23 @@ import java.util.Scanner;
 public class Play {
 	private static Scanner input = new Scanner(System.in);
 	private static char[][] table = new char[3][3];
-	private static String gameStatus;
+	private static String gameStatus = "rodando";
 
 	// algoritimo de ação - jogar
+
 	public void player1() {
 		int c;
 		// inserir coluna com regra de negocio
 		do {
 			System.out.print("\nX, escolha a coluna: ");
-			c = input.nextInt() -1 ;
+			c = input.nextInt() - 1;
 		} while (c < 0 || c > 3);
 
 		// inserir linha com regra de negocio
 		int l;
 		do {
 			System.out.print("\nX, escolha a linha: ");
-			l = input.nextInt() -1 ;
+			l = input.nextInt() - 1;
 		} while (l < 0 || l > 3);
 
 		// teste
@@ -29,6 +30,14 @@ public class Play {
 			// recursividade
 			player1();
 		}
+	}
+
+	public String getGameStatus() {
+		return gameStatus;
+	}
+
+	public void setGameStatus(String gameStatus) {
+		Play.gameStatus = gameStatus;
 	}
 
 	public void player2() {
@@ -52,12 +61,25 @@ public class Play {
 			player2();
 		}
 	}
-	// analise e validação
-<<<<<<< HEAD
-	public void analyze() {
-		// analisando linha
-		
 
+	// analise e validação
+	public void analyze() {
+		// linha
+		if (table[0][0] == 'X' && table[0][1] == 'X' && table[0][2] == 'X') {
+			setGameStatus("Vitoria de X");
+		} else if (table[1][0] == 'X' && table[1][1] == 'X' && table[1][2] == 'X') {
+			setGameStatus("Vitoria de X");
+		} else if (table[2][0] == 'X' && table[2][1] == 'X' && table[2][2] == 'X') {
+			setGameStatus("Vitoria de X");
+		}
+		// coluna
+		else if (table[0][0] == 'O' && table[0][1] == 'O' && table[0][2] == 'O') {
+			setGameStatus("Vitoria de X");
+		} else if (table[1][0] == 'O' && table[1][1] == 'O' && table[1][2] == 'O') {
+			setGameStatus("Vitoria de X");
+		} else if (table[2][0] == 'O' && table[2][1] == 'O' && table[2][2] == 'O') {
+			setGameStatus("Vitoria de X");
+		}
 	}
 
 	@Override
@@ -66,17 +88,4 @@ public class Play {
 				+ "[1]" + "\n[" + table[1][0] + "]" + "[" + table[1][1] + "]" + "[" + table[1][2] + "]" + "[2]" + "\n["
 				+ table[2][0] + "]" + "[" + table[2][1] + "]" + "[" + table[2][2] + "]" + "[3]";
 	}
-=======
-	public static void analyze() {
-	}
-
-	@Override
-		public String toString() {
-			return "\n[1]" + "[2]" + "[3]" +
-				"\n[" + table[0][0] + "]" + "[" + table[0][1] + "]" + "[" + table[0][2] + "]" + "[1]" +
-				"\n[" + table[1][0] + "]"+ "[" + table[1][1] + "]" + "[" + table[1][2] + "]" +  "[2]" +
-				"\n[" + table[2][0] + "]" + "[" + table[2][1] + "]" + "[" + table[2][2] + "]" + "[3]";
-		}
->>>>>>> e0fbfc1844f86d18daafcf08ea9259366787cec1
-
 }
