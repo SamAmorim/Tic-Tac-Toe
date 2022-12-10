@@ -73,9 +73,9 @@ public class Play {
 			setGameStatus("Vitoria de X");
 		}
 		// coluna
-		else if (table[0][0] == 'O' && table[0][1] == 'O' && table[0][2] == 'O') {
+		else if (table[0][0] == 'O' && table[1][0] == 'O' && table[2][0] == 'O') {
 			setGameStatus("Vitoria de X");
-		} else if (table[1][0] == 'O' && table[1][1] == 'O' && table[1][2] == 'O') {
+		} else if (table[1][1] == 'O' && table[2][1] == 'O' && table[2][2] == 'O') {
 			setGameStatus("Vitoria de X");
 		} else if (table[2][0] == 'O' && table[2][1] == 'O' && table[2][2] == 'O') {
 			setGameStatus("Vitoria de X");
